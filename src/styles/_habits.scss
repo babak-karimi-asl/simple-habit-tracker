@@ -1,0 +1,170 @@
+@import "./share";
+
+@mixin _input {
+  outline: none;
+  border: none;
+}
+
+.habits {
+  @include column(center,flex-start);
+  background-color: #636e72;
+  color: #dfe6e9;
+  padding: 18px;
+  height: 100vh;
+
+
+  .delete-button{
+    // margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #ff2424;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: 900;
+    color: white;
+    cursor: pointer;
+  }
+
+  h1{
+    margin-bottom: 32px;
+  }
+
+  .date{
+    @include row;
+    span{
+      user-select:none;
+    }
+    button{
+      border: none;
+      background-color: #0000001f;
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: #ffffffad;
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      margin: 5px;
+    }
+  }
+
+  .new-form {
+    @include row;
+    text-align: center;
+    input[type="text"] {
+      width: 148px;
+      padding: 3px 3px;
+      border-radius: 16px 0px 0px 16px;
+      height: 25px;
+      text-align: center;
+    }
+    input[type="number"] {
+      width: 48px;
+      padding: 3px 3px;
+      height: 25px;
+      text-align: center;
+    }
+
+    .add-button {
+      height: 31px;
+      border-radius: 0px 16px 16px 0px;
+      border: none;
+      background-color: #74b9ff;
+      width: 50px;
+      color: white;
+      font-size: 1.7rem;
+      cursor: pointer;
+    }
+
+
+    .cancel-button{
+        height: 31px;
+        border-radius: 0px;
+        border: none;
+        background-color: #d63031;
+        width: 50px;
+        color: white;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+
+    .confirm-button{
+        height: 31px;
+        border-radius: 0px 16px 16px 0px;
+        border: none;
+        background-color: #00b894;
+        width: 50px;
+        color: white;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+  }
+
+  .list {
+    .item {
+      @include column;
+      padding: 4px 8px;
+      background-color: #fab1a0;
+      border-radius: 9px;
+      margin-top: 12px;
+
+      progress {
+        width: 100%;
+        margin-top:7px;
+      }
+
+      h1{
+        margin-bottom: 32px;
+      }
+
+      .upper {
+        @include row(center,space-between);
+        width:100%;
+        .name {
+            font-size: 1.2rem;
+            color: #3a3b3c;
+            cursor:pointer;
+        }
+
+        .step{
+          font-size: 0.8rem;
+          margin-left: 10px;
+          color: #a29bfe;
+        }
+
+        .delimiter {
+            margin-left:10px;
+            font-size: 0.8rem;
+            color: #00000069;
+        }
+
+        .buttons {
+            margin-left:10px;
+          .inc-button {
+            width: 30px;
+            height: 30px;
+            margin-left: -4px;
+            text-align: center;
+            font-weight: 900;
+            font-size: 1.4rem;
+            border-radius: 0px 15px 15px 0px;
+            border: none;
+            background-color: #00cec9;
+            color: white;
+          }
+
+          .dec-button {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            font-weight: 900;
+            font-size: 1.4rem;
+            border-radius: 15px 0px 0px 15px;
+            border: none;
+            background-color: #ff7675;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

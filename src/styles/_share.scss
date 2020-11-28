@@ -1,0 +1,30 @@
+
+@mixin row($ai: center, $jc: center, $wrap: wrap) {
+  display: flex;
+  flex-direction: row;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-wrap: $wrap;
+}
+
+@mixin row-rev($ai: center, $jc: center, $wrap: wrap) {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-wrap: $wrap;
+}
+
+@mixin column($ai: center, $jc: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin column-rev($ai: center, $jc: center) {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: $ai;
+  justify-content: $jc;
+}
