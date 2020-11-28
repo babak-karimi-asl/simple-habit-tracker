@@ -35,7 +35,7 @@
       name: h.name,
       timeInMinutes: h.timeInMinutes,
       timeSpendInMinutes: 0,
-      step: newHabit.step,
+      step: h.step,
     }))
     writeValue(HABITS_LIST_KEY,resettedHabits)
   }
